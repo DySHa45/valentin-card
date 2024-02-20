@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Редактор валентинок ❤</title>
+    <link rel="stylesheet" type="text/css" href="styles.css">
+</head>
+<body>
+    <div class="valentine-card">
+        <h1>Вітаю з Днем Святого Валентина!</h1>
+        <p>Це моя валентинка для тебе.</p>
+        <form>
+            <label for="from" id="fromLabel">Від:</label><br>
+            <input type="text" id="from" name="from"><br>
+            <label for="to">Кому:</label><br>
+            <input type="text" id="to" name="to"><br>
+            <input type="checkbox" id="anonymous" name="anonymous" onchange="toggleFromField()">
+            <label for="anonymous">Відправити анонімно</label><br>
+        </form>
+        <div id="valentineCard" class="background background1">
+            <img id="valentineImage" src="images.png" alt="Valentine Image">
+            <canvas id="canvas"></canvas>
+        </div>
+        
+        <div class="background-options">
+            <button onclick="selectTemplate('1.jpg', 'background1')" class="background-option background1"></button>
+            <button onclick="selectTemplate('2.png', 'background2')" class="background-option background2"></button>
+            <button onclick="selectTemplate('3.jfif', 'background3')" class="background-option background3"></button>
+        </div>
+
+        <div>
+            <textarea id="greetingText" placeholder="Введите поздравление" rows="4" cols="50"></textarea><br>
+            <button onclick="addGreeting()">Добавить поздравление</button>
+        </div>
+
+        <div>
+            <label for="senderEmail">Ваш Email:</label><br>
+            <input type="email" id="senderEmail" name="senderEmail"><br>
+            <label for="recipientEmail">Email получателя:</label><br>
+            <input type="email" id="recipientEmail" name="recipientEmail"><br>
+            <button onclick="sendEmail()">Отправить</button>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>

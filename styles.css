@@ -1,0 +1,47 @@
+body {
+    background-color: #ffcccb;
+    font-family: Arial, sans-serif;
+}
+
+.valentine-card {
+    background-color: #ffe6e6;
+    margin: 50px auto;
+    padding: 20px;
+    width: 50%;
+    border: 1px solid #ff0000;
+    border-radius: 15px;
+    position: relative; /* Для позиціонування канваса */
+    text-align: center; /* Вирівнювання всередині батьківського контейнера */
+}
+
+.valentine-card h1 {
+    color: #ff0000;
+}
+
+.valentine-card p {
+    color: #ff0000;
+}
+
+.valentine-card img {
+    display: block;
+    margin: 0 auto;
+    max-width: 100%;
+    height: auto; /* Автоматична висота для збереження співвідношення сторін */
+    border-radius: 10px;
+    width: 450px; /* Задайте бажану ширину */
+}
+
+.background-option {
+    width: 80px; /* розмір кнопки */
+    height: 80px;
+    border: none;
+    cursor: pointer;
+    background-size: cover;
+    background-position: center;
+    transition: transform 0.3s ease;
+    border-radius: 50%;
+}
+
+.background-option:hover {
+    transform: scale(1.1); /* збільшення кнопки при наведенні */
+}
