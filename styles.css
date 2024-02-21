@@ -1,0 +1,91 @@
+body {
+    background-color: #E8E8E8;
+}
+
+.valentine-card {
+    background-color: #ECC8AF;
+    margin: 50px auto;
+    padding: 20px;
+    width: 50%;
+    border: 5px solid #333333;
+    border-radius: 15px;
+    position: relative;
+    text-align: center;
+}
+
+.valentine-card h1 {
+    color: #B90504;
+    font-family: "Yanone Kaffeesatz", sans-serif;
+     font-optical-sizing: auto;
+    font-weight: 400;
+    font-size: 50px;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3);
+}
+
+.valentine-card p {
+    color: #B90504;
+    font-family: "Yanone Kaffeesatz", sans-serif;
+    font-optical-sizing: auto;
+    font-weight: 400;
+    font-size: 35px;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3);
+}
+
+.valentine-card img {
+    display: block;
+    margin: 0 auto;
+    max-width: 100%;
+    height: auto;
+    border-radius: 10px;
+    width: 450px;
+}
+
+.valentine-card input[type="text"],
+.valentine-card input[type="email"],
+.valentine-card textarea,
+.valentine-card button {
+    border: none;
+    border-radius: 15px;
+    padding: 10px;
+    width: 80%;
+    border: 3px solid #333333;
+    margin: 10px auto;
+    display: block;
+    background-color: #F6F6F6;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    font-family: "Staatliches", sans-serif;
+}
+
+.valentine-card textarea {
+    resize: vertical;
+}
+
+.valentine-card input[type="text"]:focus,
+.valentine-card input[type="email"]:focus,
+.valentine-card textarea:focus {
+    outline: none;
+    background-color: #fff;
+}
+
+.valentine-card button {
+    cursor: pointer;
+    background-color: #990100;
+    color: #fff;
+    font-family: "Bebas Neue", sans-serif;
+    font-weight: 400;
+    font-style: normal;
+    font-size: 15px;
+    text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.3);
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    transition: background-color 0.3s ease, transform 0.3s ease;
+}
+
+.valentine-card button:hover {
+    background-color: #333333;
+    transform: scale(1.05);
+}
+
+.email-fields {
+    margin-top: 20px;
+}
+
