@@ -64,17 +64,16 @@ function addGreeting() {
 }
 
 function sendEmail() {
-    const senderName = document.getElementById('from').value;
-    const senderEmail = document.getElementById('senderEmail').value;
-    const recipientEmail = document.getElementById('recipientEmail').value;
-    const message = document.getElementById('greetingText').value;
+    const senderEmail = document.getElementById('from').value;
+    const recipientEmail = document.getElementById('to').value;
+    const greetingText = document.getElementById('greetingText').value;
+    const valentineContent = document.querySelector('.valentine-card').innerHTML;
     
-    emailjs.send("your_service_id", "your_template_id", {
-        from_name: senderName,
+    emailjs.send("service_0l01wsy","template_7bcyuv6", {
         from_email: senderEmail,
         to_email: recipientEmail,
-        message: message,
-        senderEmail: senderEmail
+        message: greetingText,
+        valentine_content: valentineContent
     }).then(function(response) {
         alert('Email sent successfully!');
     }, function(error) {
