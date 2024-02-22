@@ -1,45 +1,78 @@
 <!DOCTYPE html>
 <html>
 <head>
+    
     <title>Редактор валентинок ❤</title>
     <link rel="stylesheet" type="text/css" href="styles.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Caveat:wght@400..700&family=Dancing+Script:wght@400..700&family=Micro+5&family=Protest+Revolution&family=Staatliches&family=Tangerine:wght@400;700&family=Teko:wght@300..700&family=Yanone+Kaffeesatz&display=swap" rel="stylesheet">
+<style>
+        
+    body {
+        font-family: "Staatliches", sans-serif;
+        font-size:16px;
+    }
+    .valentine-card label[for="from"],
+    .valentine-card label[for="to"] {
+        font-family: "Staatliches", sans-serif;
+    }
+</style>
 </head>
 <body>
     <div class="valentine-card">
-        <h1>Вітаю з Днем Святого Валентина!</h1>
-        <p>Це моя валентинка для тебе.</p>
+        <h1>Welcome to the Valenline!</h1>
+        <p>Enter your message down here and we will deliver it to your loved ones ♥.</p>
         <form>
-            <label for="from" id="fromLabel">Від:</label><br>
+            <label for="from" id="fromLabel">From:</label><br>
             <input type="text" id="from" name="from"><br>
-            <label for="to">Кому:</label><br>
+            <label for="to">To:</label><br>
             <input type="text" id="to" name="to"><br>
             <input type="checkbox" id="anonymous" name="anonymous" onchange="toggleFromField()">
-            <label for="anonymous">Відправити анонімно</label><br>
+            <label for="anonymous">Stay anonymous</label><br>
         </form>
         <div id="valentineCard" class="background background1">
-            <img id="valentineImage" src="images.png" alt="Valentine Image">
-            <canvas id="canvas"></canvas>
+            <img id="valentineImage" src="Valentine_templates/Valentine_template1.jpg" alt="Valentine Image">
         </div>
         
         <div class="background-options">
-            <button onclick="selectTemplate('1.jpg', 'background1')" class="background-option background1"></button>
-            <button onclick="selectTemplate('2.png', 'background2')" class="background-option background2"></button>
-            <button onclick="selectTemplate('3.jfif', 'background3')" class="background-option background3"></button>
+            <button onclick="selectTemplate('Valentine_templates/Valentine_template1.jpg', 'background1')" class="background-option" style="background-image: url('Valentine_templates/Valentine_template1.jpg')"></button>
+            <button onclick="selectTemplate('Valentine_templates/Valentine_template2.jpg', 'background2')" class="background-option" style="background-image: url('Valentine_templates/Valentine_template2.jpg')"></button>
+            <button onclick="selectTemplate('Valentine_templates/Valentine_template3.jpg', 'background3')" class="background-option" style="background-image: url('Valentine_templates/Valentine_template3.jpg')"></button>
+            <button onclick="selectTemplate('Valentine_templates/Valentine_template4.jpg', 'background4')" class="background-option" style="background-image: url('Valentine_templates/Valentine_template4.jpg')"></button>
+            <button onclick="selectTemplate('Valentine_templates/Valentine_template5.jpg', 'background5')" class="background-option" style="background-image: url('Valentine_templates/Valentine_template5.jpg')"></button>
         </div>
 
         <div>
-            <textarea id="greetingText" placeholder="Введите поздравление" rows="4" cols="50"></textarea><br>
-            <button onclick="addGreeting()">Добавить поздравление</button>
+            <textarea id="greetingText" placeholder="Say something from the bottom of your heart" rows="4" cols="50"></textarea><br>
+            <button onclick="addGreeting()">Add your own text</button>
         </div>
 
-        <div>
-            <label for="senderEmail">Ваш Email:</label><br>
+        <div class="email-fields">
+            <label for="senderEmail">Your`s Email:</label><br>
             <input type="email" id="senderEmail" name="senderEmail"><br>
-            <label for="recipientEmail">Email получателя:</label><br>
+        </div>
+
+        <div class="email-fields">
+            <label for="recipientEmail">Recipient`s Email :</label><br>
             <input type="email" id="recipientEmail" name="recipientEmail"><br>
-            <button onclick="sendEmail()">Отправить</button>
+        </div>
+
+        <div>
+            <button onclick="sendEmail()">Send</button>
         </div>
     </div>
+
+    <script type="text/javascript"
+        src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js">
+    </script>
+    <script type="text/javascript">
+    (function(){
+      emailjs.init({
+        publicKey: "t9jH5F5ikr_u_u1zu",
+      });
+    })();
+    </script> 
 
     <script src="script.js"></script>
 </body>
